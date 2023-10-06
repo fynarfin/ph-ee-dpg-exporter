@@ -1,0 +1,9 @@
+conductor:
+  workflow-status-listener:
+    type: custom
+  task-status-listener:
+    type: custom
+
+spring:
+  kafka:
+    bootstrap-servers: localhost:9092
