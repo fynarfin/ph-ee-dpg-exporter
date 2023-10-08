@@ -1,4 +1,4 @@
-package org.mifos.pheedpgexporter;
+package com.netflix.conductor.pheedpgexporter;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -10,7 +10,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.mifos.pheedpgexporter.listeners;
+package com.netflix.conductor.pheedpgexporter.listeners;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,7 +19,7 @@ import org.springframework.stereotype.Component;
 
 import com.netflix.conductor.core.listener.WorkflowStatusListener;
 import com.netflix.conductor.model.WorkflowModel;
-import org.mifos.pheedpgexporter.kafkaexporter.PublishWorkflowMessage;
+import com.netflix.conductor.pheedpgexporter.kafkaexporter.PublishWorkflowMessage;
 
 @Component
 public class CustomWorkflowStatusListener implements WorkflowStatusListener {

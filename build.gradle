@@ -22,21 +22,17 @@ dependencies {
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.springframework.kafka:spring-kafka-test'
-
+	implementation 'org.springframework.boot:spring-boot-starter-log4j2'
 	implementation 'com.netflix.conductor:conductor-core:3.13.8'
 }
 
 
 
-group = 'org.mifos'
+group = 'com.netflix.conductor'
 version = '1.0.0-SNAPSHOT'
 sourceCompatibility = JavaVersion.VERSION_17
 def artifactId = 'ph-ee-dpg-exporter'
 def versionNumber = version
-
-//java {
-//	sourceCompatibility = '17'
-//}
 
 publishing {
 	publications {
@@ -53,6 +49,10 @@ configurations {
 	compileOnly {
 		extendsFrom annotationProcessor
 	}
+	all {
+		exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'
+	}
+
 }
 
 jar {
