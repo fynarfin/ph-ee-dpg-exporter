@@ -1,0 +1,6 @@
+rootProject.name = 'ph-ee-dpg-exporter'
+
+gradle.ext{
+    app_username = "avik@fynarfin.io"
+    app_password = "Langlock010!"
+}
